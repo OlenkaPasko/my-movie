@@ -1,0 +1,1 @@
+{"mappings":"AACeA,SAASC,cAAc","sources":["src/index.js"],"sourcesContent":["//js - search\nconst search = document.querySelector('.js-search');\n\n//функція як створює розмітку на осеові карток\n//{\n    //\"id\": 195893,\n        \n//}"],"names":["document","querySelector"],"version":3,"file":"index.7a2a3028.js.map"}
