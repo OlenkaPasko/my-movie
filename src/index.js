@@ -1,8 +1,14 @@
 //js - search
+ //const API_KEY = '9cbb52e6579c256183b59d31049fbf06';
 const search = document.querySelector('.js-search');
+const list = document.querySelector('js-list');
 
 //функція як створює розмітку на основі карток
-//{
+const instruments = [{  
+  "poster_path": "/IfB9hy4JH1eH6HEfIgIGORXi5h.jpg",   
+  "id": 343611,  
+  "original_title": "Jack Reacher: Never Go Back",  
+}]
   //  {  
   //"poster_path": "/IfB9hy4JH1eH6HEfIgIGORXi5h.jpg",  
   //"adult": false,  
@@ -27,9 +33,11 @@ const search = document.querySelector('.js-search');
 //}
 //створити розмітку
 function createMarkup(arr) {
-    const markup =arr.map(({})=`<li>
-    <img src="" alt="">
-    <h2></h2>
+    const markup =arr.map(({id,poster_path,original_title,})=`<li data-id="${id}">
+    <img src="${poster_path}" alt="${original_title}">
+    <h2>${original_title}</h2>
     <p></p>
-</li>`)
+</li>`).join('')
+  list.innerHTML = markup;
 }
+createMarkup(instruments);
